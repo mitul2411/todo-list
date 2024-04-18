@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td>name:</td>
+                <td><input type="text" name="name" id=""></td>
+            </tr>
+            <tr>
+                <td>email:</td>
+                <td><input type="text" name="email" id=""></td>
+            </tr>
+            <tr>
+                <td>password:</td>
+                <td><input type="text" name="password" id=""></td>
+            </tr>
+            <tr>
+              
+                <td><input type="submit" name="save" value="save"></td>
+            </tr>
+        </table>
+    </form>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>password</th>
+
+        </tr>
+
+        <% result.forEach(function(user){ %>
+            <tr>
+                <td><%= user.user_id %></td>    
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.password %></td>
+              </tr>
+        <% }); %>
+
+
+    </table>
+
+</body>
+</html>

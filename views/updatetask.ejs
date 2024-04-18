@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% results.forEach(function(task){ %>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>task_Name:</td>
+                    <td><input type="text" name="task_name" value="<%= task.task_name %>"></td>
+                </tr>
+                <tr>
+                    <td>task_user:</td>
+                    <td><input type="text" name="task_user" value="<%= task.task_user %>"></td>
+                </tr>
+                <tr>
+                    <td>status:</td>
+                    <td><input type="text" name="status" value="<%= task.status %>"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="save" value="save"></td>
+                </tr>
+            </table>
+        </form>
+        <% }); %>
+</body>
+</html>

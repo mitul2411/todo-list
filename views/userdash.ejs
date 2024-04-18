@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+      <tr>
+        <th>task_id</th>
+        <th>task_Name</th>
+        <th>task_user</th>
+        <th>accept</th>
+        <th>decline</th>
+        <th>runing</th>
+        <th>complite</th>
+      </tr>
+        <% results.forEach(function(task){ %>
+            <tr>
+                <td><%= task.task_id %></td>    
+                <td><%= task.task_name %></td>
+                <td><%= task.task_user %></td>
+                <td><a href="status/1/<%= task.task_id %>">accept</a></td>
+                <td><a href="status/2/<%= task.task_id %>">decline</a></td>
+                <td><a href="status/3/<%= task.task_id %>">runing</a></td>
+                <td><a href="status/4/<%= task.task_id %>">complite</a></td>
+
+            </tr>
+        <% }); %>
+
+    </table>
+</body>
+</html>

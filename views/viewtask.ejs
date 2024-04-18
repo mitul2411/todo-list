@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>task_name</th>
+            <th>task_user</th>
+            <th>status</th>
+        </tr>
+
+        <% results.forEach(function(task){ %>
+            <tr>
+                <td>
+                    <%= task.task_id %>
+                </td>
+                <td>
+                    <%= task.task_name %>
+                </td>
+                <td>
+                    <%= task.task_user %>
+                </td>
+
+
+
+                <td>
+                    <% if (task.status==0 ){%>
+                        <b>pending</b>
+                        <%}else if (task.status==1){%>
+                            <b>accept</b>
+                            <%}else if (task.status==2){%>
+                                <b>decline</b>
+                                <%}else if (task.status==3){%>
+                                    <b>runing</b>
+                                    <%}else if (task.status==4){%>
+                                        <b>complite</b>
+                                        <% } %>
+                </td>
+
+            </tr>
+        <% }); %>
+
+    </table>
+</body>
+
+</html>

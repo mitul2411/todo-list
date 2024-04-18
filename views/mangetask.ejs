@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>task_name</th>
+            <th>task_user</th>
+            <th>status</th>
+            <th>delete</th>
+            <th>update</th>
+        </tr>
+
+        <% results.forEach(function(task){ %>
+            <tr>
+                <td><%= task.task_id %></td>    
+                <td><%= task.task_name %></td>
+                <td><%= task.task_user %></td>
+                <td><%= task.status %></td>
+                <td><a href="mangetask/delete/<%= task.task_id %>">delete</a></td>
+                <td><a href="mangetask/updatetask/<%= task.task_id %>">update</a></td>
+
+
+            </tr>
+        <% }); %>
+
+
+    </table>
+</body>
+</html>
